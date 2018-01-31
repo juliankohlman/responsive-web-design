@@ -1,3 +1,25 @@
+/*
+
+	Example usage:
+
+	.some-element {
+		@media @tablet {
+			width: 100%;
+		}
+
+		@media @phone {
+			width: 50%;
+		}
+	}
+
+*/
+/*
+	#1 Inspect Element
+	#2 Adjust CSS in the the dev inspector
+	#3 Copy new styles into your actual project
+	#4 Save and watch terminal for updates
+	#5 refresh browser and start over again
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -126,21 +148,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*
-
-	Example usage:
-
-	.some-element {
-		@media @tablet {
-			width: 100%;
-		}
-
-		@media @phone {
-			width: 50%;
-		}
-	}
-
-*/
 * {
   box-sizing: border-box;
 }
@@ -161,34 +168,82 @@ h5 {
 .container {
   width: 880px;
   margin: auto;
+  display: grid;
 }
-header {
+@media (max-width: 1100px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    width: 50%;
+    display: block;
+  }
+}
+.main-header {
   width: 100%;
   display: flex;
 }
-header nav ul {
+@media (max-width: 400px) {
+  .main-header {
+    width: 50%;
+    display: block;
+  }
+}
+.main-header nav ul {
   margin-top: 40px;
   width: 610px;
   justify-content: space-between;
   display: flex;
 }
-header nav ul li a {
+@media (max-width: 400px) {
+  .main-header nav ul {
+    display: inline-block;
+  }
+}
+.main-header nav ul li a {
   text-decoration: none;
   color: #b0b0b0;
 }
-header nav ul li a:hover {
+.main-header nav ul li a:hover {
   text-decoration: underline;
   color: black;
 }
-header .logo {
+.main-header .logo {
   align-self: flex-end;
   margin: 28px 0 0 91px;
+}
+@media (max-width: 768px) {
+  .main-header .logo {
+    margin: 28px 0 0 21px;
+  }
 }
 /* Call To Action (CTA) Styles */
 .cta {
   display: flex;
   margin-top: 72px;
   justify-content: flex-end;
+}
+@media (max-width: 400px) {
+  .cta {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta .cta-text h1 {
+    margin: 0 0 0 90px;
+    padding: 10px;
+  }
+  .cta .cta-text button {
+    margin: 0 0 15px 90px;
+  }
 }
 .cta .cta-text {
   font-size: 72px;

@@ -1,6 +1,23 @@
 /* Call To Action (CTA) Styles */
 
 .cta {
+    @media @phone {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .cta-text {
+        h1 {
+            margin: 0 0 0 90px;
+            padding: 10px;
+        }
+        button {
+            margin: 0 0 15px 90px;
+        }
+      }
+    }
+
     display: flex;
     margin-top: 72px;
     justify-content: flex-end;
@@ -30,4 +47,9 @@
             color: white;
         }
     }
+    // .cta-img {
+    //     @media @phone {
+
+    //     }
+    // }
 }// cta

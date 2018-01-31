@@ -1,29 +1,33 @@
 /* Main Content Styles */
 
+// media querie order matters
+// max-width lg-small
+// min-width small-lg
+
 .main-content {
-   border-top: 2px solid black; 
+   border-top: 2px solid black;
    border-bottom: 2px solid black;
    margin: 75px 0 35px 0;
    padding: 35px 0;
    font-size: 16px;
    line-height: 18px;
-}
 
-.main-content .top-content {
+  .top-content {
     display: flex;
     justify-content: space-around;
-}
+  }
 
-.main-content .middle-img {
+  .middle-img { // NEED TO ADJUST IMG WIDTH
     display: block;
     margin: 30px auto;
-}
+    // ADD MEDIA QUERIE FOR TABLET SIZE
+  }
 
-.main-content .bottom-content {
+  .bottom-content {
     display: flex;
     justify-content: space-around;
-}
-
-.main-content .bottom-content p {
-    padding-right: 20px;
+    p {
+      padding-right: 20px;
+    }
+  }
 }
