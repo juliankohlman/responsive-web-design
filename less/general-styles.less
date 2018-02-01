@@ -12,9 +12,9 @@ body {
     // @media @tablet {
     //   overflow-x: hidden;
     // }
-    // @media @phone {
-    //   overflow-x: hidden;
-    // }
+    @media @phone {
+      overflow-x: hidden;
+    }
 }
 
 h1,
@@ -45,8 +45,7 @@ h5 {
         .main-header ul {
             display: flex;
             padding-left: 30px;
-        }
-        // .main-header .logo {
+        } // .main-header .logo {
         //     align-self: flex-start;
         //     margin: 28px 0 0 21px;
         // }
@@ -56,21 +55,46 @@ h5 {
         width: 50%;
         display: block;
         margin: auto;
-
-
+        .main-content .text-content {
+          padding: 0;
+        }
+        .cta-img { width: 300px; }
         .main-header {
-          display: flex;
-          flex-direction: column;
+            display: flex;
+            flex-direction: column;
             ul {
                 display: inline-block;
                 margin: 40px 0 0 40px;
             }
             li {
-                padding: 5px;
+                // padding: 5px;
             }
         }
         .main-header .logo {
-          display: inline;
+            display: inline;
+        }
+        .main-content .bottom-content {
+            // display: inline;
+            // flex-flow: wrap;
+            flex-direction: column;
+            flex: 1;
+            p {
+              // text-align: justify;
+              width: 200px;
+              padding-bottom: 20px;
+            }
+        }
+        .main-content .top-content {
+          display: flex;
+          flex-direction: column;
+          h4 {
+            margin-top: 10px;
+          }
+          p {
+            width: 200px;
+            padding: 0;
+            margin-bottom: 10px;
+          }
         }
     }
 }

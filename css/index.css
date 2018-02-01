@@ -156,6 +156,12 @@ body {
   height: 100%;
   font-family: 'Titillium Web', sans-serif;
 }
+@media (max-width: 400px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
 h1,
 h2,
 h3,
@@ -194,6 +200,12 @@ h5 {
     display: block;
     margin: auto;
   }
+  .container .main-content .text-content {
+    padding: 0;
+  }
+  .container .cta-img {
+    width: 300px;
+  }
   .container .main-header {
     display: flex;
     flex-direction: column;
@@ -202,11 +214,28 @@ h5 {
     display: inline-block;
     margin: 40px 0 0 40px;
   }
-  .container .main-header li {
-    padding: 5px;
-  }
   .container .main-header .logo {
     display: inline;
+  }
+  .container .main-content .bottom-content {
+    flex-direction: column;
+    flex: 1;
+  }
+  .container .main-content .bottom-content p {
+    width: 200px;
+    padding-bottom: 20px;
+  }
+  .container .main-content .top-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .main-content .top-content h4 {
+    margin-top: 10px;
+  }
+  .container .main-content .top-content p {
+    width: 200px;
+    padding: 0;
+    margin-bottom: 10px;
   }
 }
 .main-header {
@@ -294,25 +323,6 @@ h5 {
     width: 95%;
   }
 }
-@media (max-width: 400px) {
-  .main-content {
-    text-align: center;
-  }
-  .main-content .middle-img {
-    width: 100%;
-  }
-  .main-content p {
-    text-align: justify;
-    padding: 0 20px 0 20px;
-  }
-  .main-content .bottom-content {
-    text-align: center;
-  }
-  .main-content .bottom-content p {
-    text-align: justify;
-    padding: 0 20px 0 20px;
-  }
-}
 .main-content .top-content {
   display: flex;
   justify-content: space-around;
@@ -324,9 +334,6 @@ h5 {
 .main-content .bottom-content {
   display: flex;
   justify-content: space-around;
-}
-.main-content .bottom-content p {
-  padding-right: 20px;
 }
 /* Contact Styles */
 @media (max-width: 768px) {
