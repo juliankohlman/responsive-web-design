@@ -214,6 +214,11 @@ h5 {
     margin: 40px 0 0 60px;
   }
 }
+@media (max-width: 768px) {
+  .main-header nav ul {
+    padding-left: 30px;
+  }
+}
 @media (max-width: 400px) {
   .main-header nav ul li {
     padding: 5px;
@@ -257,6 +262,11 @@ h5 {
     margin: 0 0 30px 90px;
   }
 }
+@media (max-width: 768px) {
+  .cta .cta-img {
+    padding-right: 55px;
+  }
+}
 .cta .cta-text {
   font-size: 72px;
   text-align: center;
@@ -288,6 +298,12 @@ h5 {
   padding: 35px 0;
   font-size: 16px;
   line-height: 18px;
+}
+@media (max-width: 768px) {
+  .main-content .text-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (max-width: 400px) {
   .main-content {
